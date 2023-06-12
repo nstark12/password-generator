@@ -1,41 +1,46 @@
+/* pseudo elements */
+:root {
+    --font-color: hsl(206, 17%, 28%);
+    --card-bg: #e7e9eb;
+    --accent: #c0c7cf; 
+}
+
+/* universal selectors */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-html,
-body,
-.wrapper {
+/* removes margin & padding from entire html document & gives default font and background color*/
+html {
   height: 100%;
   margin: 0;
   padding: 0;
-}
-
-body {
   font-family: sans-serif;
   background-color: #f9fbfd;
 }
 
-.wrapper {
-  padding-top: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
+/* styles header element */
 header {
-  text-align: center;
-  padding: 20px;
-  padding-top: 0px;
-  color: hsl(206, 17%, 28%);
+    text-align: center;
+    padding: 0px 20px 20px 20px;
+    color: var(--font-color);
+  }
+
+/* class selectors */
+/* gives padding to the wrapper class */
+.wrapper {
+  padding: 30px 20px;
 }
 
+/* styles the card class */
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
   border-width: 1px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
-  color: hsl(206, 17%, 28%);
+  color: var(--font-color);
   font-size: 18px;
   margin: 0 auto;
   max-width: 800px;
@@ -46,7 +51,7 @@ header {
   content: " ";
   display: block;
   width: 100%;
-  background: #e7e9eb;
+  background: var(--card-bg);
   height: 2px;
 }
 
@@ -62,7 +67,7 @@ header {
   content: " ";
   display: block;
   width: 100%;
-  background: #e7e9eb;
+  background: var(--card-bg);
   height: 2px;
 }
 
@@ -90,7 +95,7 @@ header {
 
 button[disabled] {
   cursor: default;
-  background: #c0c7cf;
+  background: var(--accent);
 }
 
 .float-right {
@@ -112,7 +117,7 @@ button[disabled] {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
-  border: 2px dashed #c0c7cf;
+  border: 2px dashed var(--accent);
   border-radius: 6px;
   resize: none;
   overflow: hidden;
