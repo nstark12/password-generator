@@ -57,6 +57,7 @@ button[disabled] {
   padding: 30px 40px;
 }
 
+/* pseudo element on card header inserts content after */
 .card-header::after {
   content: " ";
   display: (--block);
@@ -65,14 +66,17 @@ button[disabled] {
   height: 2px;
 }
 
+/* styles height on body of card */
 .card-body {
   min-height: 100px;
 }
 
+/* styles footer of card */
 .card-footer {
   text-align: var(--align-center);
 }
 
+/* pseudo element on card footer inserts content before */
 .card-footer::before {
   content: " ";
   display: var(--block);
@@ -81,12 +85,14 @@ button[disabled] {
   height: 2px;
 }
 
+/* pseudo element on card footer inserts element after */
 .card-footer::after {
   content: " ";
   display: var(--block);
   clear: both;
 }
 
+/* styling on btn class */
 .btn {
   border: none;
   background-color: hsl(360, 91%, 36%);
@@ -102,10 +108,13 @@ button[disabled] {
   cursor: pointer;
 }
 
+/* creates a class for float right */
 .float-right {
   float: right;
 }
 
+/* id selectors */
+/* styles password id selector */
 #password {
   -webkit-appearance: none;
   -moz-appearance: none;

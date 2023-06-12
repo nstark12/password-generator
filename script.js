@@ -49,7 +49,7 @@ function generatePassword () {
     possibleCharacters = possibleCharacters.concat(numeric);
   }
 
-  // Generate final password
+  // Generate final password with for loop
   var userPassword = ""
   for (let i = 0; i < passwordLength; i++) {
     userPassword += possibleCharacters[Math.floor(Math.random() * (possibleCharacters.length))];
