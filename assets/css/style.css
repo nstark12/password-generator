@@ -5,6 +5,8 @@
     --accent: #c0c7cf;
     --accent-2: hsl(0, 0%, 100%);
     --box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+    --align-center: center;
+    --block: block;
 }
 
 /* universal selectors */
@@ -25,7 +27,7 @@ html {
 
 /* styles header element */
 header {
-    text-align: center;
+    text-align: var(--align-center);
     padding: 0px 20px 20px 20px;
     color: var(--font-color);
   }
@@ -57,7 +59,7 @@ button[disabled] {
 
 .card-header::after {
   content: " ";
-  display: block;
+  display: (--block);
   width: 100%;
   background: var(--card-bg);
   height: 2px;
@@ -68,12 +70,12 @@ button[disabled] {
 }
 
 .card-footer {
-  text-align: center;
+  text-align: var(--align-center);
 }
 
 .card-footer::before {
   content: " ";
-  display: block;
+  display: var(--block);
   width: 100%;
   background: var(--card-bg);
   height: 2px;
@@ -81,7 +83,7 @@ button[disabled] {
 
 .card-footer::after {
   content: " ";
-  display: block;
+  display: var(--block);
   clear: both;
 }
 
@@ -96,7 +98,7 @@ button[disabled] {
   line-height: 22px;
   margin: 16px 16px 16px 20px;
   padding: 14px 34px;
-  text-align: center;
+  text-align: var(--align-center);
   cursor: pointer;
 }
 
@@ -109,11 +111,11 @@ button[disabled] {
   -moz-appearance: none;
   appearance: none;
   border: none;
-  display: block;
+  display: var(--block);
   width: 100%;
   padding: 15px 15px 85px;
   font-size: 1.2rem;
-  text-align: center;
+  text-align: var(--align-center);
   margin-top: 10px;
   margin-bottom: 10px;
   border: 2px dashed var(--accent);
