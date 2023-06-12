@@ -1,4 +1,4 @@
-/* pseudo elements */
+/* pseudo class to add css variables */
 :root {
     --font-color: hsl(206, 17%, 28%);
     --card-bg: #e7e9eb;
