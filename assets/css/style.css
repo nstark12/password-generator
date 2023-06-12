@@ -2,7 +2,9 @@
 :root {
     --font-color: hsl(206, 17%, 28%);
     --card-bg: #e7e9eb;
-    --accent: #c0c7cf; 
+    --accent: #c0c7cf;
+    --accent-2: hsl(0, 0%, 100%);
+    --box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
 }
 
 /* universal selectors */
@@ -28,6 +30,12 @@ header {
     color: var(--font-color);
   }
 
+/* styles button when disabled */
+button[disabled] {
+    cursor: default;
+    background: var(--accent);
+  }
+
 /* class selectors */
 /* gives padding to the wrapper class */
 .wrapper {
@@ -36,10 +44,10 @@ header {
 
 /* styles the card class */
 .card {
-  background-color: hsl(0, 0%, 100%);
+  background-color: var(--accent-2);
   border-radius: 5px;
   border-width: 1px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+  box-shadow: var(--box-shadow);
   color: var(--font-color);
   font-size: 18px;
   margin: 0 auto;
@@ -81,9 +89,8 @@ header {
   border: none;
   background-color: hsl(360, 91%, 36%);
   border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
-    0px;
-  color: hsl(0, 0%, 100%);
+  box-shadow: var(--box-shadow);
+  color: var(--accent-2);
   display: inline-block;
   font-size: 22px;
   line-height: 22px;
@@ -91,11 +98,6 @@ header {
   padding: 14px 34px;
   text-align: center;
   cursor: pointer;
-}
-
-button[disabled] {
-  cursor: default;
-  background: var(--accent);
 }
 
 .float-right {
@@ -109,10 +111,7 @@ button[disabled] {
   border: none;
   display: block;
   width: 100%;
-  padding-top: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 85px;
+  padding: 15px 15px 85px;
   font-size: 1.2rem;
   text-align: center;
   margin-top: 10px;
@@ -123,19 +122,23 @@ button[disabled] {
   overflow: hidden;
 }
 
+/* media queries for smaller screen sizes */
 @media (max-width: 690px) {
+    /* resizes button for smaller screens */
   .btn {
     font-size: 1rem;
     margin: 16px 0px 0px 0px;
     padding: 10px 15px;
   }
 
+  /* resizes password for smaller screens */
   #password {
     font-size: 1rem;
   }
 }
 
 @media (max-width: 500px) {
+    /* resizes button for even smaller screens */
   .btn {
     font-size: 0.8rem;
   }
