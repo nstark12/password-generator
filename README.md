@@ -17,7 +17,7 @@ After you make your selections, a random password will be generated.
 View screenshot of webpage below:
 ![screenshot of random password generator](./assets/images/03-javascript-homework-demo.png)
 
-Link to webpage: 
+Link to webpage: https://nstark12.github.io/password-generator/
 
 ## Credits
 
